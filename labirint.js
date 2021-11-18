@@ -121,12 +121,12 @@ function searhStep (cell, path) {
             if (nrstCell.r >= 0 
 		&& nrstCell.r < labir.length 
 		&& nrstCell.c >= 0 
-		&& nrstCell.c < labir.length
+		&& nrstCell.c < labir[0].length
 		&& labir[nrstCell.r][nrstCell.c] === 0
 		&& path[nrstCell.r][nrstCell.c][0] !== 1) {
 
                 nearestCells.push(nrstCell);
-		path[nrstCell.r][nrstCell.c] = [1, (path[cell.r][cell.c][1]||0) + 1, cell]; //[ïðîâåðåíà ëè ÿ÷åéêà, ðàññòîÿíèå îò ñòàðòà, îòêóäà ïðèøëè]		
+		path[nrstCell.r][nrstCell.c] = [1, (path[cell.r][cell.c][1]||0) + 1, cell]; //[Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¥Ã­Ã  Ã«Ã¨ Ã¿Ã·Ã¥Ã©ÃªÃ , Ã°Ã Ã±Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¥ Ã®Ã² Ã±Ã²Ã Ã°Ã²Ã , Ã®Ã²ÃªÃ³Ã¤Ã  Ã¯Ã°Ã¨Ã¸Ã«Ã¨]		
             }
         }
 
